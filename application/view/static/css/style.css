@@ -6,3 +6,152 @@ body {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5vh;
+}
+
+.navbar-brand {
+    display: flex;
+    width: 7vw;
+    padding-left: 15vh;
+    padding-right: 10vh;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+}
+
+form{
+    border-bottom: 1px solid #7A7A7A;
+}
+
+input {
+    color:#7A7A7A;
+    border: none;
+    width: 17.5vw;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    padding-right: 0;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-self: center;
+
+    width: 18vh;
+    padding-left: 2vw;
+}
+
+.language hr {
+    width: 20px;
+    border: 1px solid #7A7A7A;
+    transform: rotate(90deg);
+}
+
+.sidepanel {
+    display: none;
+}
+
+.openbtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 4vh;
+    }
+
+    .navbar-brand {
+        order: 1;
+        width: 30vw;
+        padding-left: 3vh;
+    }
+
+    .shopping-cart {
+        order: 2;
+    }
+    
+    .search {
+        order: 3;
+    }
+
+    input {
+        padding-top: 2.5vh;
+        width: 70vw;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .language {
+        display: none;
+    }
+
+    /* menu lateral */
+
+    .sidepanel {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        background: #ffffff;
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+        padding-top: 1.5vh;
+        transition: 0.5s;
+        display: flex;
+
+    }
+
+    .sidepanel a {
+        padding: 2vh 3vw 2vh 5vw;
+        text-decoration: none;
+        font-size: 7vw;
+        color: #000000;
+        transition: 0.3s;
+    }
+
+    .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 7vh;
+        margin-left: 50px;
+    }
+
+    .openbtn {
+        display: block;
+        background: #ffffff;
+        color: #000000;
+        font-size: 4vh;
+        text-align: start;
+        padding: 3vh 6vw;
+        border: none;
+        width: 20vw;
+    }
+}

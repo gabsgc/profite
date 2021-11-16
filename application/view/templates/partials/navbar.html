@@ -1,0 +1,58 @@
+<nav>
+    <div class="navbar-brand">
+        <img src="../../static/img/Logo.svg" alt="Profit-e" width="100%">
+    </div>
+
+    <div class="search">
+        <form action="" id="search">
+            <input type="text" placeholder="O que está procurando?">
+            <i class="fa fa-fw fa-search"></i>
+        </form>
+    </div>
+
+    <div class="profile">
+        <i class="fa fa-fw fa-user-circle"></i>
+        <p>Minha Conta</p>
+    </div>
+
+    <div class="shopping-cart">
+        <img src="../../static/img/carrinho.svg" alt="Carrinho"  id="icon">
+        <img src="../../static/img/number.svg" alt="Quantidade"  id="icon">
+    </div>
+
+    <div class="language">
+        <hr>
+        <img src="../../static/img/br.png" alt="Português Brasil">
+        <img src="../../static/img/es.png" alt="Espanhol">
+        <img src="../../static/img/gb.png" alt="Inglês Britânico">
+    </div>
+
+    <div id="side-menu" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="">
+            <i class="fa fa-fw fa-user-circle"></i>
+            <p>Minha Conta</p>
+        </a>
+        <a href="">
+            <img src="../../static/img/br.png" alt="Português Brasil">
+        </a>
+        <a href="">
+            <img src="../../static/img/es.png" alt="Espanhol">
+        </a>
+        <a href="">
+            <img src="../../static/img/gb.png" alt="Inglês Britânico">
+        </a>
+
+    </div>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+</nav>
+
+<script>
+    function openNav() {
+        document.getElementById("side-menu").style.width = "70vw";
+    }
+
+    function closeNav() {
+        document.getElementById("side-menu").style.width = "0";
+    }
+</script>

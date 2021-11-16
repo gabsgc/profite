@@ -5,10 +5,12 @@
         <meta charset="utf-8">
         <meta name="author" content="Gabriela Garcia">
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
         <title>Profit-e</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        {% include 'partials/navbar.html' %}
+        
     </body>
 </html>
