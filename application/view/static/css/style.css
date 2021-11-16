@@ -7,6 +7,21 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+::-webkit-scrollbar {
+    background: #dadada;
+    width: 6px;
+    box-shadow: inset 0 0 5px #000000; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7A7A7A; 
+}
+
+.container {
+    height: 50vh;
+}
+
+/* navbar */
 nav {
     display: flex;
     flex-direction: row;
@@ -153,5 +168,139 @@ input {
         padding: 3vh 6vw;
         border: none;
         width: 20vw;
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    background: #011627;
+    color: #ffffff;
+    border-bottom: 1.8vh solid #2EC4B6;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    padding-bottom: 1.5vh;
+
+    font-weight: 700;
+}
+
+.location hr {
+    width: 3vw;
+    margin-left: 0;
+    background: #ff9f1c;
+    border: 0.5vh solid #FF9F1C;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    font-weight: 400;
+}
+
+#address-2 {
+    padding-left: 2vw;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 14vh;
+}
+
+.contact button {
+    background: #FF9F1C;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+
+    width: 14vw;
+    height: 5.5vh;
+    margin-bottom: 3vh;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    
+    font-size: 12px;
+    padding-bottom: 4.5vh;
+}
+
+.copyright img {
+    width: 4vw;
+}
+
+#created {
+    display: flex;
+    flex-direction: column;
+}
+
+#created p {
+    padding-bottom: 0.6vh;
+}
+
+#powered {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        border-bottom: 1.5vh solid #2EC4B6;
+    }
+
+    .location hr {
+        width: 10vw;
+        border: 0.3vh solid #FF9F1C;
+    }
+
+    .address p {
+        font-size: 14px;
+    }
+
+    #address-2 {
+        padding-left: 5vw;
+    }
+
+    .contact {
+        padding-top: 3vh;
+    }
+
+    .contact button {
+        width: 60vw;
+        height: 6vh;
+        margin-bottom: 3vh;
+    }
+    
+    .copyright {
+        font-size: 12px;
+        padding-bottom: 3vh;
+    }
+    
+    .copyright img {
+        width: 18vw;
+    }
+    
+    #powered {
+        padding-left: 20.5vw;
     }
 }
