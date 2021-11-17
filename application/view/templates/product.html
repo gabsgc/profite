@@ -1,0 +1,18 @@
+{% for product in product_list %}
+<div class="card">
+    <img src="{{product.image}}" alt="{{product.name}}">
+    <h4>{{product.name}}</h4>
+    <img src="../static/img/rating.svg" alt="Rating" width="25%" id="rating">
+    <p>
+        <span class="oldPrice">de R$ {{product.oldPrice}},00</span>
+        <br>
+        <span class="price">por R$ {{product.price}},00</span>
+        <br>
+        ou em {{product.count}}x de R$ {{product.value}},00
+    </p>
+    <button class="buy">
+        <img src="../static/img/buy-cart.svg" alt="Carrinho">
+        COMPRAR
+    </button>
+</div>
+{% endfor %}
