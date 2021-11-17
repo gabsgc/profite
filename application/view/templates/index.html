@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8">
-        <meta name="author" content="Gabriela Garcia">
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-        <title>Profit-e</title>
-    </head>
-    <body>
-        {% include 'partials/navbar.html' %}
 
-        <div class="container">
-            conteudo
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="author" content="Gabriela Garcia">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Profit-e</title>
+</head>
+
+<body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container">
+        <div class="slideshow">
+            <div class="my-slides fade">
+                <img src="../static/img/banner.png" width="100%">
+            </div>
+            <div class="my-slides fade">
+                <img src="../static/img/banner-1.png" width="100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <!--
+                <div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            -->
         </div>
 
-        {% include 'partials/footer.html' %}
-    </body>
+        <div class="slideshow-mobile">
+            <div class="fade">
+                <img src="../static/img/bn-mobile.png" width="100%">
+            </div>
+           
+            <!--
+                <div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            -->
+        </div>
+
+        <div class="products">
+            <h2>Produtos</h2>
+            <hr>
+
+            <div id="listar_products">
+
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/footer.html' %}
+</body>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("my-slides");
+        //var dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) { slideIndex = 1 }
+
+        if (n < 1) { slideIndex = slides.length }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        //for (i = 0; i < dots.length; i++) {
+        //    dots[i].className = dots[i].className.replace(" active", "");
+        //}
+
+        slides[slideIndex - 1].style.display = "block";
+        //dots[slideIndex - 1].className += "active";
+    }
+</script>
+
 </html>
